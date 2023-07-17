@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        #userList {
+            list-style-type: none;
+            margin-bottom: 20px;
+            max-height: 30vh;
+            overflow: auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        #messages {
+            list-style-type: none;
+            margin-bottom: 20px;
+            max-height: 40vh;
+            overflow: auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        #messages li {
+            padding: 5px 0;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        form input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        form button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        #username {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        /* Dark mode button style */
+        #dark-mode-button {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Socket.IO Chat</h1>
+    <input id="username" type="text" placeholder="Enter a username" />
+    <button id="dark-mode-button">Toggle Dark Mode</button> <!-- Dark mode button -->
+    <h3>Active Users</h3>
+    <ul id="userList"></ul>
+    <h3>Chat Messages</h3>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" placeholder="Type a message" />
+      <button>Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/chat.js"></script>
+  </body>
+</html>
