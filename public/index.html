@@ -138,7 +138,17 @@
     </style>
   </head>
   <body>
-    
+    <h1>Socket.IO Chat</h1>
+    <input id="username" type="text" placeholder="Enter a username" />
+    <button id="dark-mode-button">Toggle Dark Mode</button> <!-- Dark mode button -->
+    <h3>Active Users</h3>
+    <ul id="userList"></ul>
+    <h3>Chat Messages</h3>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" placeholder="Type a message" />
+      <button>Send</button>
+    </form>
         <div class="header">
             <h1><i class="fas fa-comments"></i> Socket.IO Chat</h1>
             <p>Real-time chat made easy</p>
